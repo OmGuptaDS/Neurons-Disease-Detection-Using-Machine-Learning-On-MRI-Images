@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Nurons Disease Detection By Using Machine Learning</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2? family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+<!-- ---------------     Header Section    --------------- -->
+
+<section class="header">
+    <nav>
+      <a href="index.html" class="logo"><img src="static\img\logo13.1.png" alt="Logo"></a>
+      <div class="nav-toggle">
+        <i class="fa fa-bars"></i>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#detect">Detect</a></li>
+        <li><a href="#diseases">Diseases</a></li>
+        <li><a href="#flow">Project Flow</a></li>
+        <li><a href="#testimonial">Testimonials</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contactus">Contact</a></li>
+        <li><a href="#aboutus">About</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <hr>
+
+
+<!--   ------------   Hear Image Will Display  -------------- -->
+
+<section class="image-container1" id="detect">
+    <div class="image-wrapper">
+        <h2>Image You Uploaded</h2>
+        <img id="uploaded_image" src="{{url_for('static',filename='uploads/'+ uploaded_image)}}" alt="Uploaded Image">
+    </div>
+    <hr>
+    <div class="disease-info">
+        <div class="typing-demo">
+            <h2>You Have <b class="color">{{disease_name}}</b></h2>
+            <p><b>{{Dname}}</b></p>
+        </div>
+    </div>
+</section>
+
+
+<!-- --------------  Report Conclusion  ----------------- -->
+
+<section class="report-conclusion">
+    <h2>Your Report Conclusion</h2>
+    <div class="flex-container2">
+        <div class="symptoms">
+            <h3>Symptoms</h3><br>
+            <p>{{symptoms}}</p>
+        </div>
+        <div class="precautions">
+            <h3>Precautions</h3><br>
+            <p>{{precautions}} </p>
+        </div>
+    </div>
+</section>
+
+  <!-- ------------      Diesease We Detect        --------------- -->
+
+<section class="disease-section" id="diseases">
+  <h1>Disease We Detect</h1>
+  <p><i>We detect five diseases and their types</i></p>
+  <div class="flex-container">
+    <div class="disease-card alzheimers">
+      <h3>Alzheimer's</h3>
+      <p>We detect alzheimers mild-demented,moderate-demented,non-demented,very mild-demented.</p>
+    </div>
+    <div class="disease-card parkinson">
+      <h3>Parkinson</h3><br>
+      <p>We are detecting parkinson's disease from MRI images.</p>
+    </div>
+    <div class="disease-card stroke">
+      <h3>Brain Stroke</h3><br>
+      <p>We are detecting brain stroke disease from MRI images.</p>
+    </div>
+    <div class="disease-card tumor">
+      <h3>Brain Tumor</h3><br>
+      <p>We detect brain tumor glioma, meningioma, pituitary.</p>
+    </div>
+    <div class="disease-card white-matter">
+      <h3>White Matter</h3><br>
+      <p>We are detecting white matter disease from MRI images.</p>
+    </div>
+    <div class="disease-card normal">
+      <h3>Normal</h3>
+      <p>If the specified disease is not detected, our model accurately identifies a normal brain condition.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- -----------------   How To Detect   -------------- -->
+
+
+  <section class="disease-section1" id="flow">
+    <h1>How to detect diseases</h1>
+    <p>The given <b>block and flow diagrams</b> explain how diseases will be detected</p>
+    <div class="image-container">
+      <div class="image-block">
+        <h2>Project Block Diagram</h2>
+        <img src="static\img\block1.png" alt="Project Block Diagram">
+      </div>
+      <div class="image-flow">
+        <h2>Project Flow Diagram</h2>
+        <img src="static\img\flow2.png" alt="Project Flow Diagram">
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  
+
+  <!-- ---------------------  Testimonials  -------------------- -->
+
+  <section class="testimonial-section" id="testimonial">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        <img src="static\img\doctor1.jpeg" alt="User 1" class="user-photo">
+        <div class="user-details">
+          <h3>Dr. Praveen Gupta</h3>
+          <p class="comment">"I am amazed by how accurately this project identifies neurological diseases from MRI images.It's truly groundbreaking!."</p>
+          <div class="rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9734;</span>
+            <span class="star">&#9734;</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="static\img\doctor2.jpeg" alt="User 2" class="user-photo">
+        <div class="user-details">
+          <h3>Dr. B Rajendran</h3>
+          <p class="comment">"As someone who has witnessed the impact of neurological diseases,I can attest to the significance of projects like this.Thanks you for your dedication to healthcare improvement."</p>
+          <div class="rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9734;</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="static\img\doctor3.jpeg" alt="User 3" class="user-photo">
+        <div class="user-details">
+          <h3>Dr. K Sridhar</h3>
+          <p class="comment">"This project brings hope to countless families affected by neurological condition.Early detection through MRI classification is revolutionary."</p>
+          <div class="rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- -------------------------  Team  ---------------------- -->
+
+
+  <section id="team" class="team section-bg">
+    <div class="teamcontainer" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Team</h2>
+        <p>Welcome to our amazing team!</p>
+      </div>
+
+      <div class="team-members">
+        <!-- Team member 1 -->
+        <div class="member">
+          <div class="pic"><img src="static\img\Om.jpeg" alt="User 1"></div>
+          <div class="member-info">
+            <h4>Om Gupta</h4>
+            <p>A proficient expert in machine learning and deep learning techniques,leading the development of advanced algorithms for MRI image classification.</p>
+            <div class="social">
+              <a href="https://www.instagram.com/omgupta_688?igsh=eG8wcms2bXN2ZG03"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/om-gupta-1b59102b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/omgupta_688?igsh=eG8wcms2bXN2ZG03"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/om-gupta-1b59102b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Team member 2 -->
+        <div class="member">
+          <div class="pic"><img src="static\img\harshita.jpeg" alt="User 1"></div>
+          <div class="member-info">
+            <h4>P Harshita</h4>
+            <p>Assisted in data collection, Harshita has played a pivotal role in gathering and organizing the diverse datasets required for training and testing the classification models.</p>
+            <div class="social">
+              <a href="https://www.instagram.com/_p.harshita_/?igsh=Z2lkYjh3b2J5bWNn"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/_p.harshita_/?igsh=Z2lkYjh3b2J5bWNn"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/_p.harshita_/?igsh=Z2lkYjh3b2J5bWNn"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.instagram.com/_p.harshita_/?igsh=Z2lkYjh3b2J5bWNn"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team member 3 -->
+        <div class="member">
+          <div class="pic"><img src="static\img\Rohini.jpeg" alt="User 1"></div>
+          <div class="member-info">
+            <h4>Rohini Bhagat</h4>
+            <p>Rohini contibuted to making the project's interface visually appealing and easy to use.</p>
+            <div class="social">
+              <a href="https://www.instagram.com/"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team member 4 -->
+        <div class="member">
+          <div class="pic"><img src="static\img\pratik.jpeg" alt="User 1"></div>
+          <div class="member-info">
+            <h4>Pratik Lonkar</h4>
+            <p>Pratik led the development of user-friendly interface.</p>
+            <div class="social">
+              <a href="https://www.facebook.com/share/urUPZvztqJkgneRQ/?mibextid=qi2Omg"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/mr.pratik_183?utm_source=qr&igsh=ajhuZnhydHhldWp5"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/mr.pratik_183?utm_source=qr&igsh=ajhuZnhydHhldWp5"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.instagram.com/mr.pratik_183?utm_source=qr&igsh=ajhuZnhydHhldWp5"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team member 5 -->
+        <div class="member">
+          <div class="pic"><img src="static\img\Tanuja.jpeg" alt="User 1"></div>
+          <div class="member-info">
+            <h4>Tanuja Dongre</h4>
+            <p>Tanuja provided creative design ideas and concepts for the front-end interface,enriching the project with visually engaging elements and user-centric features.</p>
+            <div class="social">
+              <a href="https://www.instagram.com/tanuja_dongare?igsh=eDRjOXQ0b3ptZDJv"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/tanuja_dongare?igsh=eDRjOXQ0b3ptZDJv"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/tanuja_dongare?igsh=eDRjOXQ0b3ptZDJv"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.instagram.com/tanuja_dongare?igsh=eDRjOXQ0b3ptZDJv"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Team member 6 -->
+        <div class="member">
+          <div class="pic"><img src="static\img\shreya.jpeg" alt="User 1"></div>
+          <div class="member-info">
+            <h4>Shreya Khekde</h4>
+            <p>Shreya assisted in developing the project's front-end components.</p>
+            <div class="social">
+              <a href="https://www.facebook.com/shreya.khekde.1?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.facebook.com/shreya.khekde.1?mibextid=ZbWKwL"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/samik_prakash/"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.instagram.com/samik_prakash/"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat similar structure for other team members -->
+      </div>
+    </div>
+  </section>
+
+
+
+   <!-- ------------------------  Contact Us   -------------------- -->
+
+   <section class="contact-us" id="contactus">
+    <div class="title">
+      <h2>Contact US</h2>
+      <p>Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible</p><br>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="circle"><i class="fa fa-map-marker"></i></span>
+            <p>Itwari Nagpur, Maharashtra India</p>
+          </div>
+          <div class="info-item">
+            <span class="circle"><i class="fa fa-envelope"></i></span>
+            <a href="mailto:omg343505@gmail.com">omg343505@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <span class="circle"><i class="fa fa-phone"></i></span>
+            <a href="tel:+91 8669386472">+91 866 938 6472</a>
+          </div>
+          <ul class="social-icons">
+            <li><a href="https://www.instagram.com/omgupta_688?igsh=eG8wcms2bXN2ZG03"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/om-gupta-1b59102b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/om-gupta-1b59102b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/omgupta_688?igsh=eG8wcms2bXN2ZG03"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7441.965615194267!2d79.1045377414466!3d21.153082472109823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0da51dde853%3A0x3f8ae6437bd6de1a!2sItwari%2C%20Nagpur%2C%20Maharashtra%20440002!5e0!3m2!1sen!2sin!4v1712731718241!5m2!1sen!2sin" 
+          frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <!-- <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+            frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+        </div> 
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- ------------------------  Footer  ---------------------- -->
+
+
+  <section class="About-us" id="aboutus">
+    <h1>About Us</h1>
+    <div class="about_body">
+      <div class="column about">
+        <h2>Introduction</h2><br>
+        <p>Welcome to our platform dedicated to the early detection of neuron diseases using deep learning techniques on
+          MRI images. We are passionate about leveraging cutting-edge technology to make a positive impact on healthcare
+          outcomes.</p>
+      </div>
+      <!-- Other column divs -->
+
+      <div class="column about">
+        <h2>Our Mission</h2><br>
+        <p>Our mission is to revolutionize the diagnosis and treatment of neuron diseases by developing a robust and
+          accurate deep learning model capable of detecting subtle abnormalities in MRI images, leading to early
+          intervention and improved patient outcomes.</p>
+      </div>
+      <div class="column about">
+        <h2>Approach</h2><br>
+        <p>Utilizing state-of-the-art deep learning algorithms, we analyze MRI scans with precision and sensitivity,
+          identifying patterns indicative of neuron diseases at their earliest stages. Our multidisciplinary team of
+          experts collaborates closely to refine our models and ensure the highest level of accuracy and reliability.
+        </p>
+      </div>
+      <div class="column about">
+        <h2>Impact</h2><br>
+        <p>Early detection is key to effectively managing neuron diseases, yet it remains a significant challenge. By
+          providing a tool for early diagnosis, we aim to empower healthcare professionals to intervene proactively,
+          potentially slowing disease progression and improving the quality of life for patients.</p>
+      </div>
+      <div class="column about">
+        <h2>Team</h2><br>
+        <p>Our team comprises dedicated researchers, data scientists, and medical professionals, each bringing unique
+          expertise to the project. Together, we are committed to pushing the boundaries of medical technology and
+          making a meaningful difference in the lives of those affected by neuron diseases.</p>
+      </div>
+      <div class="column about">
+        <h2>Acknowledgements</h2><br>
+        <p>We extend our sincere gratitude to our dedicated faculty, and our family doctor and neurologist Dr. Praveen Gupta and their frinds for their invaluable support and
+          collaboration throughout the development of this project.</p>
+      </div>
+    </div>
+
+
+    </div>
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p>For inquiries or collaborations, please don't hesitate to reach out to us at <a href="#contactus">Contact Us</a>.</p>
+    </div>
+    <div class="icons">
+      <a href="https://www.instagram.com/omgupta_688?igsh=eG8wcms2bXN2ZG03"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/om-gupta-1b59102b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"></a><i class="fa fa-twitter"></i></a>
+      <a href="https://www.instagram.com/omgupta_688?igsh=eG8wcms2bXN2ZG03"> <i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/om-gupta-1b59102b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <footer>
+      <p>Made with <i class="fa fa-heart-o"></i> by Om Gupta & Team</p>
+    </footer>
+  </section>
+
+  <!-- ---------------- JavaScript for Toggle Menu-----------------   -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      navToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
